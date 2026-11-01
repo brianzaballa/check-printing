@@ -1,0 +1,38 @@
+{
+    "name": "brianzaballa/check-printing",
+    "description": "Laravel package for generating printable bank checks as PDFs.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/view": "^10.0|^11.0|^12.0",
+        "dompdf/dompdf": "^2.0|^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BrianZaballa\\CheckPrinting\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrianZaballa\\CheckPrinting\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BrianZaballa\\CheckPrinting\\CheckPrintingServiceProvider"
+            ],
+            "aliases": {
+                "CheckPrinting": "BrianZaballa\\CheckPrinting\\Facades\\CheckPrinting"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
